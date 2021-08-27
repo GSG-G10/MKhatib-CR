@@ -1,0 +1,34 @@
+{
+  "name": "MKhatib-CR",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Src/index.js",
+    "dev-start": "nodemon Src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G10/MKhatib-CR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G10/MKhatib-CR/issues"
+  },
+  "homepage": "https://github.com/GSG-G10/MKhatib-CR#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.12"
+  }
+}
