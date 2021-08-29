@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Src/index.js",
-    "dev-start": "nodemon Src/index.js"
+    "test": "NODE_ENV=test jest",
+    "start": "NODE_ENV=production node Src/index.js",
+    "dev-start": "NODE_ENV=development nodemon Src/index.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
-    "nodemon": "^2.0.12"
+    "jest": "^27.1.0",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
   }
 }
