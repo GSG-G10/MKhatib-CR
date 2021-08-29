@@ -4,13 +4,15 @@ const { join } = require('path');
 
 const express = require('express');
 const compression = require('compression');
+const cookieParser = require('cookie-parser');
 const router = require('./Routes');
 
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
-app.disabled('x-powered-by');
+app.disabled('X-Powered-By');
 
+app.use(cookieParser());
 app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
