@@ -1,7 +1,7 @@
 const {
   hashPassword,
   comparePassword,
-} = require('./middleware.hash-password');
+} = require('./middleware.password.process');
 
 module.exports = {
   hashPassword,
