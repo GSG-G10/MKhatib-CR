@@ -5,7 +5,6 @@ module.exports = (req, res, next) => {
   const {
     username, password,
   } = req.body;
-  console.log(username);
   checkUser(username)
     .then((result) => {
       const userValidation = result.rows[0].case;

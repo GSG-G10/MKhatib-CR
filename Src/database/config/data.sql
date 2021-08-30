@@ -13,6 +13,7 @@ CREATE TABLE users(
     avatar TEXT default 'https://robohash.org/consequaturmollitiaqui.png?size=50x50&set=set1 ',
     password TEXT NOT NULL
 );
+
 CREATE TABLE communities (
     id SERIAL PRIMARY KEY,
     community_name VARCHAR(255) NOT NULL
@@ -28,7 +29,7 @@ CREATE TABLE community_posts (
     post_title VARCHAR(255) NOT NULL,
     content_type VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
-    post_date TIMESTAMP NOT NULL,
+    post_date DATE NOT NULL,
     flair_name VARCHAR(255),
     post_votes INTEGER default 0
 );
@@ -37,10 +38,11 @@ CREATE TABLE post_comments (
     user_id INTEGER REFERENCES users(id) ON UPDATE CASCADE,
     post_id INTEGER REFERENCES community_posts(id) ON UPDATE CASCADE,
     content TEXT NOT NULL,
-    comment_date TIMESTAMP NOT NULL,
+    comment_date DATE NOT NULL,
     comment_votes INTEGER default 0
 );
 -- Fake Database
+
 insert into users (
         username,
         email,
@@ -4041,4 +4043,722 @@ values (
         'https://robohash.org/utcupiditaterecusandae.png?size=50x50&set=set1',
         'aa9a53b52b1b799c4f50b9c4bbe78ff93e2d2469fcb0588a357c6c9a405ed391'
     );
+insert into communities (community_name)
+values ('Face Moisturiser');
+insert into communities (community_name)
+values ('Lysol');
+insert into communities (community_name)
+values ('soCALM Pain Relieving');
+insert into communities (community_name)
+values ('Mary Kay Blemish');
+insert into communities (community_name)
+values ('aller ease');
+insert into communities (community_name)
+values ('ENGERIX-B');
+insert into communities (community_name)
+values ('Plus White With Peroxide');
+insert into communities (community_name)
+values ('Leader Kids');
+insert into communities (community_name)
+values ('NIVEA A Kiss');
+insert into communities (community_name)
+values ('KROGER');
+insert into communities (community_name)
+values ('good neighbor pharmacy');
+insert into communities (community_name)
+values ('Sugar Cookie ');
+insert into communities (community_name)
+values ('ZO SKIN HEALTH');
+insert into communities (community_name)
+values ('Tension Headache Relief');
+insert into communities (community_name)
+values ('SELECT ANTISEPTIC');
+insert into communities (community_name)
+values ('Meloxicam');
+insert into communities (community_name)
+values ('Minitran');
+insert into communities (community_name)
+values ('Southern Ragweed');
+insert into communities (community_name)
+values ('Natralia Anti Fungal');
+insert into communities (community_name)
+values ('Guaifenesin DM');
+insert into communities (community_name)
+values ('PERFECTION LUMIERE');
+insert into communities (community_name)
+values ('Rouge Dior');
+insert into communities (community_name)
+values ('Androgel');
+insert into communities (community_name)
+values ('Azithromycin');
+insert into communities (community_name)
+values ('Mometasone furoate');
+insert into communities (community_name)
+values ('CAPTURE');
+insert into communities (community_name)
+values ('Head and Shoulders');
+insert into communities (community_name)
+values ('HAWAIIAN Tropic');
+insert into communities (community_name)
+values ('Pumpkin');
+insert into communities (community_name)
+values ('Lotrel');
+insert into communities (community_name)
+values ('Micardis');
+insert into communities (community_name)
+values ('BELSOMRA');
+insert into communities (community_name)
+values ('Octreotide Acetate');
+insert into communities (community_name)
+values ('Bronchial Cough Therapy');
+insert into communities (community_name)
+values ('Loratadine');
+insert into communities (community_name)
+values ('ACID REDUCER');
+insert into communities (community_name)
+values ('Spinach');
+insert into communities (community_name)
+values ('PCXX NEUTRAL');
+insert into communities (community_name)
+values ('Fluticasone Propionate');
+insert into communities (community_name)
+values ('Intense Care Snail');
+insert into communities (community_name)
+values ('CLARINS Ever');
+insert into communities (community_name)
+values ('Androgel');
+insert into communities (community_name)
+values ('Hydromorphone Hydrochloride');
+insert into communities (community_name)
+values ('Degree');
+insert into communities (community_name)
+values ('Reboost');
+insert into communities (community_name)
+values ('Soft Care Foam');
+insert into communities (community_name)
+values ('Laura Mercier');
+insert into communities (community_name)
+values ('GAMMA -12');
+insert into communities (community_name)
+values ('IMITREX');
+insert into communities (community_name)
+values ('Citalopram');
+insert into community_members (user_id, community_id)
+values (87, 22);
+insert into community_members (user_id, community_id)
+values (136, 10);
+insert into community_members (user_id, community_id)
+values (216, 40);
+insert into community_members (user_id, community_id)
+values (74, 25);
+insert into community_members (user_id, community_id)
+values (149, 33);
+insert into community_members (user_id, community_id)
+values (125, 43);
+insert into community_members (user_id, community_id)
+values (189, 35);
+insert into community_members (user_id, community_id)
+values (82, 30);
+insert into community_members (user_id, community_id)
+values (71, 22);
+insert into community_members (user_id, community_id)
+values (87, 18);
+insert into community_members (user_id, community_id)
+values (214, 3);
+insert into community_members (user_id, community_id)
+values (41, 21);
+insert into community_members (user_id, community_id)
+values (151, 14);
+insert into community_members (user_id, community_id)
+values (27, 8);
+insert into community_members (user_id, community_id)
+values (93, 49);
+insert into community_members (user_id, community_id)
+values (196, 34);
+insert into community_members (user_id, community_id)
+values (58, 10);
+insert into community_members (user_id, community_id)
+values (220, 30);
+insert into community_members (user_id, community_id)
+values (27, 34);
+insert into community_members (user_id, community_id)
+values (12, 38);
+insert into community_members (user_id, community_id)
+values (190, 7);
+insert into community_members (user_id, community_id)
+values (143, 20);
+insert into community_members (user_id, community_id)
+values (28, 34);
+insert into community_members (user_id, community_id)
+values (166, 13);
+insert into community_members (user_id, community_id)
+values (132, 37);
+insert into community_members (user_id, community_id)
+values (190, 46);
+insert into community_members (user_id, community_id)
+values (195, 32);
+insert into community_members (user_id, community_id)
+values (232, 39);
+insert into community_members (user_id, community_id)
+values (178, 10);
+insert into community_members (user_id, community_id)
+values (215, 9);
+insert into community_members (user_id, community_id)
+values (41, 3);
+insert into community_members (user_id, community_id)
+values (160, 33);
+insert into community_members (user_id, community_id)
+values (197, 23);
+insert into community_members (user_id, community_id)
+values (206, 5);
+insert into community_members (user_id, community_id)
+values (110, 34);
+insert into community_members (user_id, community_id)
+values (209, 12);
+insert into community_members (user_id, community_id)
+values (239, 48);
+insert into community_members (user_id, community_id)
+values (227, 7);
+insert into community_members (user_id, community_id)
+values (147, 33);
+insert into community_members (user_id, community_id)
+values (149, 36);
+insert into community_members (user_id, community_id)
+values (188, 42);
+insert into community_members (user_id, community_id)
+values (117, 11);
+insert into community_members (user_id, community_id)
+values (212, 44);
+insert into community_members (user_id, community_id)
+values (20, 35);
+insert into community_members (user_id, community_id)
+values (120, 44);
+insert into community_members (user_id, community_id)
+values (162, 24);
+insert into community_members (user_id, community_id)
+values (63, 9);
+insert into community_members (user_id, community_id)
+values (158, 7);
+insert into community_members (user_id, community_id)
+values (200, 1);
+insert into community_members (user_id, community_id)
+values (54, 22);
+insert into community_members (user_id, community_id)
+values (45, 12);
+insert into community_members (user_id, community_id)
+values (161, 42);
+insert into community_members (user_id, community_id)
+values (191, 21);
+insert into community_members (user_id, community_id)
+values (225, 7);
+insert into community_members (user_id, community_id)
+values (146, 20);
+insert into community_members (user_id, community_id)
+values (56, 1);
+insert into community_members (user_id, community_id)
+values (240, 8);
+insert into community_members (user_id, community_id)
+values (110, 36);
+insert into community_members (user_id, community_id)
+values (126, 25);
+insert into community_members (user_id, community_id)
+values (211, 40);
+insert into community_members (user_id, community_id)
+values (79, 31);
+insert into community_members (user_id, community_id)
+values (39, 8);
+insert into community_members (user_id, community_id)
+values (28, 45);
+insert into community_members (user_id, community_id)
+values (129, 17);
+insert into community_members (user_id, community_id)
+values (188, 42);
+insert into community_members (user_id, community_id)
+values (46, 9);
+insert into community_members (user_id, community_id)
+values (147, 27);
+insert into community_members (user_id, community_id)
+values (223, 28);
+insert into community_members (user_id, community_id)
+values (27, 12);
+insert into community_members (user_id, community_id)
+values (248, 6);
+insert into community_members (user_id, community_id)
+values (79, 12);
+insert into community_members (user_id, community_id)
+values (229, 44);
+insert into community_members (user_id, community_id)
+values (70, 44);
+insert into community_members (user_id, community_id)
+values (9, 48);
+insert into community_members (user_id, community_id)
+values (227, 21);
+insert into community_members (user_id, community_id)
+values (152, 34);
+insert into community_members (user_id, community_id)
+values (62, 29);
+insert into community_members (user_id, community_id)
+values (186, 29);
+insert into community_members (user_id, community_id)
+values (55, 4);
+insert into community_members (user_id, community_id)
+values (92, 42);
+insert into community_members (user_id, community_id)
+values (135, 8);
+insert into community_members (user_id, community_id)
+values (100, 19);
+insert into community_members (user_id, community_id)
+values (1, 19);
+insert into community_members (user_id, community_id)
+values (169, 35);
+insert into community_members (user_id, community_id)
+values (181, 43);
+insert into community_members (user_id, community_id)
+values (99, 11);
+insert into community_members (user_id, community_id)
+values (106, 50);
+insert into community_members (user_id, community_id)
+values (63, 45);
+insert into community_members (user_id, community_id)
+values (113, 6);
+insert into community_members (user_id, community_id)
+values (27, 35);
+insert into community_members (user_id, community_id)
+values (199, 4);
+insert into community_members (user_id, community_id)
+values (7, 25);
+insert into community_members (user_id, community_id)
+values (223, 27);
+insert into community_members (user_id, community_id)
+values (160, 2);
+insert into community_members (user_id, community_id)
+values (20, 1);
+insert into community_members (user_id, community_id)
+values (146, 48);
+insert into community_members (user_id, community_id)
+values (77, 15);
+insert into community_members (user_id, community_id)
+values (185, 26);
+insert into community_members (user_id, community_id)
+values (101, 28);
+insert into community_members (user_id, community_id)
+values (36, 47);
+insert into community_members (user_id, community_id)
+values (38, 33);
+insert into community_members (user_id, community_id)
+values (218, 27);
+insert into community_members (user_id, community_id)
+values (17, 34);
+insert into community_members (user_id, community_id)
+values (74, 38);
+insert into community_members (user_id, community_id)
+values (34, 42);
+insert into community_members (user_id, community_id)
+values (231, 14);
+insert into community_members (user_id, community_id)
+values (196, 30);
+insert into community_members (user_id, community_id)
+values (73, 3);
+insert into community_members (user_id, community_id)
+values (77, 13);
+insert into community_members (user_id, community_id)
+values (88, 31);
+insert into community_members (user_id, community_id)
+values (1, 22);
+insert into community_members (user_id, community_id)
+values (198, 37);
+insert into community_members (user_id, community_id)
+values (57, 30);
+insert into community_members (user_id, community_id)
+values (176, 48);
+insert into community_members (user_id, community_id)
+values (236, 23);
+insert into community_members (user_id, community_id)
+values (8, 4);
+insert into community_members (user_id, community_id)
+values (63, 43);
+insert into community_members (user_id, community_id)
+values (43, 2);
+insert into community_members (user_id, community_id)
+values (215, 42);
+insert into community_members (user_id, community_id)
+values (107, 2);
+insert into community_members (user_id, community_id)
+values (82, 48);
+insert into community_members (user_id, community_id)
+values (248, 44);
+insert into community_members (user_id, community_id)
+values (121, 17);
+insert into community_members (user_id, community_id)
+values (178, 44);
+insert into community_members (user_id, community_id)
+values (80, 19);
+insert into community_members (user_id, community_id)
+values (108, 26);
+insert into community_members (user_id, community_id)
+values (164, 24);
+insert into community_members (user_id, community_id)
+values (33, 46);
+insert into community_members (user_id, community_id)
+values (4, 33);
+insert into community_members (user_id, community_id)
+values (171, 27);
+insert into community_members (user_id, community_id)
+values (76, 9);
+insert into community_members (user_id, community_id)
+values (195, 15);
+insert into community_members (user_id, community_id)
+values (72, 28);
+insert into community_members (user_id, community_id)
+values (202, 8);
+insert into community_members (user_id, community_id)
+values (214, 2);
+insert into community_members (user_id, community_id)
+values (120, 11);
+insert into community_members (user_id, community_id)
+values (103, 29);
+insert into community_members (user_id, community_id)
+values (99, 42);
+insert into community_members (user_id, community_id)
+values (11, 42);
+insert into community_members (user_id, community_id)
+values (25, 30);
+insert into community_members (user_id, community_id)
+values (64, 8);
+insert into community_members (user_id, community_id)
+values (201, 40);
+insert into community_members (user_id, community_id)
+values (102, 22);
+insert into community_members (user_id, community_id)
+values (236, 8);
+insert into community_members (user_id, community_id)
+values (129, 9);
+insert into community_members (user_id, community_id)
+values (85, 10);
+insert into community_members (user_id, community_id)
+values (25, 12);
+insert into community_members (user_id, community_id)
+values (209, 29);
+insert into community_members (user_id, community_id)
+values (158, 41);
+insert into community_members (user_id, community_id)
+values (88, 29);
+insert into community_members (user_id, community_id)
+values (177, 31);
+insert into community_members (user_id, community_id)
+values (208, 25);
+insert into community_members (user_id, community_id)
+values (140, 10);
+insert into community_members (user_id, community_id)
+values (245, 4);
+insert into community_members (user_id, community_id)
+values (89, 27);
+insert into community_members (user_id, community_id)
+values (26, 45);
+insert into community_members (user_id, community_id)
+values (56, 41);
+insert into community_members (user_id, community_id)
+values (216, 15);
+insert into community_members (user_id, community_id)
+values (93, 19);
+insert into community_members (user_id, community_id)
+values (56, 12);
+insert into community_members (user_id, community_id)
+values (51, 14);
+insert into community_members (user_id, community_id)
+values (222, 12);
+insert into community_members (user_id, community_id)
+values (245, 25);
+insert into community_members (user_id, community_id)
+values (158, 36);
+insert into community_members (user_id, community_id)
+values (185, 17);
+insert into community_members (user_id, community_id)
+values (217, 22);
+insert into community_members (user_id, community_id)
+values (174, 44);
+insert into community_members (user_id, community_id)
+values (92, 5);
+insert into community_members (user_id, community_id)
+values (80, 6);
+insert into community_members (user_id, community_id)
+values (71, 2);
+insert into community_members (user_id, community_id)
+values (125, 34);
+insert into community_members (user_id, community_id)
+values (92, 28);
+insert into community_members (user_id, community_id)
+values (187, 28);
+insert into community_members (user_id, community_id)
+values (181, 31);
+insert into community_members (user_id, community_id)
+values (6, 45);
+insert into community_members (user_id, community_id)
+values (95, 39);
+insert into community_members (user_id, community_id)
+values (90, 27);
+insert into community_members (user_id, community_id)
+values (125, 42);
+insert into community_members (user_id, community_id)
+values (138, 13);
+insert into community_members (user_id, community_id)
+values (209, 2);
+insert into community_members (user_id, community_id)
+values (174, 37);
+insert into community_members (user_id, community_id)
+values (21, 9);
+insert into community_members (user_id, community_id)
+values (51, 32);
+insert into community_members (user_id, community_id)
+values (121, 44);
+insert into community_members (user_id, community_id)
+values (138, 39);
+insert into community_members (user_id, community_id)
+values (96, 47);
+insert into community_members (user_id, community_id)
+values (147, 20);
+insert into community_members (user_id, community_id)
+values (195, 28);
+insert into community_members (user_id, community_id)
+values (56, 6);
+insert into community_members (user_id, community_id)
+values (232, 47);
+insert into community_members (user_id, community_id)
+values (146, 43);
+insert into community_members (user_id, community_id)
+values (146, 7);
+insert into community_members (user_id, community_id)
+values (143, 36);
+insert into community_members (user_id, community_id)
+values (206, 44);
+insert into community_members (user_id, community_id)
+values (218, 21);
+insert into community_members (user_id, community_id)
+values (73, 8);
+insert into community_members (user_id, community_id)
+values (58, 26);
+insert into community_members (user_id, community_id)
+values (150, 49);
+insert into community_members (user_id, community_id)
+values (245, 16);
+insert into community_members (user_id, community_id)
+values (242, 3);
+insert into community_members (user_id, community_id)
+values (162, 26);
+insert into community_members (user_id, community_id)
+values (214, 13);
+insert into community_members (user_id, community_id)
+values (226, 38);
+insert into community_members (user_id, community_id)
+values (17, 37);
+insert into community_members (user_id, community_id)
+values (24, 17);
+insert into community_members (user_id, community_id)
+values (41, 14);
+insert into community_members (user_id, community_id)
+values (155, 5);
+insert into community_members (user_id, community_id)
+values (2, 13);
+insert into community_members (user_id, community_id)
+values (41, 32);
+insert into community_members (user_id, community_id)
+values (83, 17);
+insert into community_members (user_id, community_id)
+values (110, 19);
+insert into community_members (user_id, community_id)
+values (139, 32);
+insert into community_members (user_id, community_id)
+values (74, 17);
+insert into community_members (user_id, community_id)
+values (160, 38);
+insert into community_members (user_id, community_id)
+values (102, 22);
+insert into community_members (user_id, community_id)
+values (35, 30);
+insert into community_members (user_id, community_id)
+values (182, 25);
+insert into community_members (user_id, community_id)
+values (7, 30);
+insert into community_members (user_id, community_id)
+values (190, 24);
+insert into community_members (user_id, community_id)
+values (214, 45);
+insert into community_members (user_id, community_id)
+values (170, 35);
+insert into community_members (user_id, community_id)
+values (30, 3);
+insert into community_members (user_id, community_id)
+values (103, 38);
+insert into community_members (user_id, community_id)
+values (133, 46);
+insert into community_members (user_id, community_id)
+values (128, 39);
+insert into community_members (user_id, community_id)
+values (230, 14);
+insert into community_members (user_id, community_id)
+values (46, 28);
+insert into community_members (user_id, community_id)
+values (34, 34);
+insert into community_members (user_id, community_id)
+values (154, 22);
+insert into community_members (user_id, community_id)
+values (60, 25);
+insert into community_members (user_id, community_id)
+values (41, 3);
+insert into community_members (user_id, community_id)
+values (71, 46);
+insert into community_members (user_id, community_id)
+values (13, 1);
+insert into community_members (user_id, community_id)
+values (226, 15);
+insert into community_members (user_id, community_id)
+values (111, 30);
+insert into community_members (user_id, community_id)
+values (61, 48);
+insert into community_members (user_id, community_id)
+values (192, 20);
+insert into community_members (user_id, community_id)
+values (205, 48);
+insert into community_members (user_id, community_id)
+values (39, 10);
+insert into community_members (user_id, community_id)
+values (64, 29);
+insert into community_members (user_id, community_id)
+values (128, 14);
+insert into community_members (user_id, community_id)
+values (89, 34);
+insert into community_members (user_id, community_id)
+values (109, 20);
+insert into community_members (user_id, community_id)
+values (182, 3);
+insert into community_members (user_id, community_id)
+values (50, 4);
+insert into community_members (user_id, community_id)
+values (218, 34);
+insert into community_members (user_id, community_id)
+values (51, 13);
+insert into community_members (user_id, community_id)
+values (102, 47);
+insert into community_members (user_id, community_id)
+values (161, 5);
+insert into community_members (user_id, community_id)
+values (112, 7);
+insert into community_members (user_id, community_id)
+values (22, 36);
+insert into community_members (user_id, community_id)
+values (60, 38);
+insert into community_members (user_id, community_id)
+values (155, 18);
+insert into community_members (user_id, community_id)
+values (75, 9);
+insert into community_members (user_id, community_id)
+values (121, 19);
+insert into community_members (user_id, community_id)
+values (9, 32);
+insert into community_members (user_id, community_id)
+values (45, 30);
+insert into community_members (user_id, community_id)
+values (67, 45);
+insert into community_members (user_id, community_id)
+values (232, 11);
+insert into community_members (user_id, community_id)
+values (220, 47);
+insert into community_members (user_id, community_id)
+values (224, 40);
+insert into community_members (user_id, community_id)
+values (99, 44);
+insert into community_members (user_id, community_id)
+values (6, 38);
+insert into community_members (user_id, community_id)
+values (87, 37);
+insert into community_members (user_id, community_id)
+values (165, 24);
+insert into community_members (user_id, community_id)
+values (38, 46);
+insert into community_members (user_id, community_id)
+values (127, 25);
+insert into community_members (user_id, community_id)
+values (122, 27);
+insert into community_members (user_id, community_id)
+values (65, 47);
+insert into community_members (user_id, community_id)
+values (63, 39);
+insert into community_members (user_id, community_id)
+values (244, 34);
+insert into community_members (user_id, community_id)
+values (18, 21);
+insert into community_members (user_id, community_id)
+values (59, 50);
+insert into community_members (user_id, community_id)
+values (76, 47);
+insert into community_members (user_id, community_id)
+values (216, 20);
+insert into community_members (user_id, community_id)
+values (154, 38);
+insert into community_members (user_id, community_id)
+values (199, 1);
+insert into community_members (user_id, community_id)
+values (5, 45);
+insert into community_members (user_id, community_id)
+values (140, 15);
+insert into community_members (user_id, community_id)
+values (110, 44);
+insert into community_members (user_id, community_id)
+values (232, 33);
+insert into community_members (user_id, community_id)
+values (162, 1);
+insert into community_members (user_id, community_id)
+values (38, 33);
+insert into community_members (user_id, community_id)
+values (134, 21);
+insert into community_members (user_id, community_id)
+values (169, 12);
+insert into community_members (user_id, community_id)
+values (28, 25);
+insert into community_members (user_id, community_id)
+values (219, 43);
+insert into community_members (user_id, community_id)
+values (142, 7);
+insert into community_members (user_id, community_id)
+values (81, 22);
+insert into community_members (user_id, community_id)
+values (110, 26);
+insert into community_members (user_id, community_id)
+values (160, 4);
+insert into community_members (user_id, community_id)
+values (188, 5);
+insert into community_members (user_id, community_id)
+values (162, 33);
+insert into community_members (user_id, community_id)
+values (44, 43);
+insert into community_members (user_id, community_id)
+values (23, 26);
+insert into community_members (user_id, community_id)
+values (227, 24);
+insert into community_members (user_id, community_id)
+values (78, 8);
+insert into community_members (user_id, community_id)
+values (158, 10);
+insert into community_members (user_id, community_id)
+values (213, 16);
+insert into community_posts (user_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
+ values (12,2,'test post 1','video','fsdfsdfgfdjgp;fg;pjp;jpss;gdfgdfgdfgdfgdfgfdgdfgfdgdfg','2021-08-30 13:21:00', 'Help', 44);
+ insert into community_posts (user_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
+ values (50,8,'test post 2','video','fsdfsdfgfdjgp;fg;pjp;jpss;gdfgdfgdfgdfgdfgfdgdfgfdgdfg','2021-08-30 13:21:00', 'Help', 150);
+ insert into community_posts (user_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
+ values (227,5,'test post 3','video','fsdfsdfgfdjgp;fg;pjp;jpss;gdfgdfgdfgdfgdfgfdgdfgfdgdfg','2021-08-30 13:21:00', 'Help', 200);
+
+ insert into post_comments (user_id, post_id,content, comment_date, comment_votes)
+ values (220, 1,'sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2021-04-11 06:52:55', 158);
+
+ insert into post_comments (user_id, post_id,content, comment_date, comment_votes)
+ values (120, 2,'sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2021-04-11 06:52:55', 158);
+
+ insert into post_comments (user_id, post_id,content, comment_date, comment_votes)
+ values (100, 3,'sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2021-04-11 06:52:55', 158);
+
+ insert into post_comments (user_id, post_id,content, comment_date, comment_votes)
+ values (1, 3,'sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', '2021-04-11 06:52:55', 158);
+
+
 COMMIT;
