@@ -4,7 +4,7 @@ const { newPost } = require('../database/queries');
 module.exports = (req, res, next) => {
   const { token } = req.cookies;
   const decode = jwt.decode(token, (err, data) => data);
-  const { userId } = decode;
+  const ownerId = decode.userId;
 
   const {
     communityId,
@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
     postDate,
     flairName,
   } = req.body;
-  newPost(userId, communityId, postTitle, contentType, content, postDate, flairName)
+  newPost(ownerId, communityId, postTitle, contentType, content, postDate, flairName)
     .then(() => next())
     .catch((err) => res.json(err.message));
 };
