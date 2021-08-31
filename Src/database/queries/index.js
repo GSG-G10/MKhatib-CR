@@ -6,6 +6,7 @@ const getPassword = require('./query.get-password');
 const newPost = require('./query.new-post');
 const newComment = require('./query.new-comment');
 const getPostId = require('./query.get-post-id');
+const newCommunity = require('./query.new-community');
 
 module.exports = {
   signUp,
@@ -16,4 +17,5 @@ module.exports = {
   getCommunityId,
   newComment,
   getPostId,
+  newCommunity,
 };

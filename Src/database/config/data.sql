@@ -16,7 +16,7 @@ CREATE TABLE users(
 
 CREATE TABLE communities (
     id SERIAL PRIMARY KEY,
-    community_name VARCHAR(255) NOT NULL
+    community_name VARCHAR(255) UNIQUE NOT NULL
 );
 CREATE TABLE community_members (
     user_id INTEGER REFERENCES users(id) ON UPDATE CASCADE,
