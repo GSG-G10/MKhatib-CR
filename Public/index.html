@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -11,12 +11,44 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style/main-style.css">
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/main-style.css" />
+    <link rel="stylesheet" href="./style/index.css" />
     <title>Reddit</title>
-</head>
-<body>
-    <header></header>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-navbar">
+        <section class="header-navbar-logo col-1">
+          <div class="logo-box">
+            <i class="fab fa-reddit logo-icon"></i>
+            <h3 class="logo-title">Reddit</h3>
+          </div>
+        </section>
+        <section class="header-navbar-search col-3">
+          <div class="search-field">
+            <span class="search-icon"><i class="fas fa-search"></i></span>
+
+            <input
+              class="search-input"
+              type="text"
+              placeholder="Search Reddit"
+              autocomplete="off"
+            />
+          </div>
+        </section>
+        <section class="header-navbar-auth col-1">
+          <div class="auth-login">
+            <span>Log In</span>
+          </div>
+          <div class="auth-signup">
+            <span>Sign Ip</span>
+          </div>
+          <div class="aut-night-mode">
+            <i class="far fa-user"></i>
+          </div>
+        </section>
+      </nav>
+    </header>
     <main></main>
-</body>
+  </body>
 </html>
