@@ -21,13 +21,13 @@ module.exports = (req, res, next) => {
                     if (condition) {
                       next();
                     } else {
-                      res.redirect('/worng-login');
+                      res.json({ 'Authentication Status': 'You have Entered A wrong data' });
                     }
                   });
               });
           });
       } else {
-        res.redirect('/worng-login');
+        res.json({ 'Authentication Status': 'You have Entered A wrong data' });
       }
     })
     .catch((err) => new Error(err.message));
