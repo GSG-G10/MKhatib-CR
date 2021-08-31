@@ -24,7 +24,7 @@ CREATE TABLE community_members (
 );
 CREATE TABLE community_posts (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id) ON UPDATE CASCADE,
+    owner_id INTEGER REFERENCES users(id) ON UPDATE CASCADE,
     community_id INTEGER REFERENCES communities(id) ON UPDATE CASCADE,
     post_title VARCHAR(255) NOT NULL,
     content_type VARCHAR(255) NOT NULL,
@@ -4741,11 +4741,11 @@ insert into community_members (user_id, community_id)
 values (158, 10);
 insert into community_members (user_id, community_id)
 values (213, 16);
-insert into community_posts (user_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
+insert into community_posts (owner_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
  values (12,2,'test post 1','video','fsdfsdfgfdjgp;fg;pjp;jpss;gdfgdfgdfgdfgdfgfdgdfgfdgdfg','2021-08-30 13:21:00', 'Help', 44);
- insert into community_posts (user_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
+ insert into community_posts (owner_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
  values (50,8,'test post 2','video','fsdfsdfgfdjgp;fg;pjp;jpss;gdfgdfgdfgdfgdfgfdgdfgfdgdfg','2021-08-30 13:21:00', 'Help', 150);
- insert into community_posts (user_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
+ insert into community_posts (owner_id, community_id, post_title, content_type, content, post_date, flair_name, post_votes)
  values (227,5,'test post 3','video','fsdfsdfgfdjgp;fg;pjp;jpss;gdfgdfgdfgdfgdfgfdgdfgfdgdfg','2021-08-30 13:21:00', 'Help', 200);
 
  insert into post_comments (user_id, post_id,content, comment_date, comment_votes)
