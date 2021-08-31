@@ -3,6 +3,7 @@ const signInUser = require('./conrtoller.signin');
 const newPost = require('./controller.new-post');
 const setCookies = require('./controller.set-cookies');
 const newComment = require('./controller.new-comment');
+const newCommunity = require('./controller.new-community');
 
 module.exports = {
   signUpUser,
@@ -10,4 +11,5 @@ module.exports = {
   newPost,
   setCookies,
   newComment,
+  newCommunity,
 };
