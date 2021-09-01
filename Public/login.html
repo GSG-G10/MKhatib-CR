@@ -13,10 +13,39 @@
     />
     <link rel="stylesheet" href="./style/main-style.css">
     <link rel="stylesheet" href="./style/login.css">
-    <title>Reddit</title>
+    <title>Log In</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
+  <header class="header">
+    <div class="header-box">
+       <span class="header-icon">
+      <i class="fab fa-reddit-alien"></i>
+    </span>
+    <h4 class="header-title">
+      Log In Reddit
+    </h4>
+    </div>
+   
+    
+  </header>
+    <main>
+      <div class="login">
+        <figure class="avatar">
+          <img src="//picsum.photos/70" alt="Avatar" class="avatar__image">
+          
+        </figure>
+        <form class="form" action="/check-user" method="post">
+          <div class="input">
+            <labe class="input__label">Username</labe>
+            <input type="text" name="username" class="input__username" placeholder="username" required>
+          </div>
+          <div class="input">
+            <labe class="input__label">Password</labe>
+            <input type="password" name="password" class="input__password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="form__button">Log in</button>
+        </form>
+      </div>  
+    </main>
 </body>
 </html>
