@@ -13,6 +13,7 @@ const {
   getCommunityName,
   getPostInfo,
   getPostId,
+  getTrendingNews,
 } = require('../Middlewares');
 
 router.post('/add-user', signUpUser);
@@ -20,4 +21,5 @@ router.post('/check-user', signInUser, getUserId, setCookies, (req, res) => res.
 router.post('/new-post', getCommunityName, newPost, (req, res) => res.json(req.body));
 router.post('/new-comment', getPostInfo, getPostId, newComment, (req, res) => res.json(req.body));
 router.post('/new-community', newCommunity, (req, res) => res.json(req.body));
+router.get('/trending-news', getTrendingNews);
 module.exports = router;
