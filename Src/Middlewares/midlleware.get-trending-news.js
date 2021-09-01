@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const axios = require('axios').default;
+const axios = require('axios');
 
 const API_KEY = {
   headers: {
