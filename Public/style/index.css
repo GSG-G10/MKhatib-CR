@@ -69,15 +69,21 @@
 .auth-login,
 .auth-signup {
   background: var(--iconColor);
-  color: var(--whiteColor);
   padding: 0.3rem 1.2rem;
   border-radius: 25px;
   cursor: pointer;
 }
-.aut-night-mode {
+.auth-btn {
+  color: var(--whiteColor);
+  text-decoration: none;
+}
+.auth-logout {
   font-size: 1.3rem;
   cursor: pointer;
+}
+.logout-btn {
   color: var(--brandColor);
+  text-decoration: none;
 }
 /* Main Section */
 .main {
@@ -125,61 +131,63 @@
 .trending-card-title {
   margin-bottom: 0.5rem;
 }
-      /* Post Section */
-      .posts-box{
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .posts-container{
-        width: 50%;
-    }
-    .post-card{
-        padding: 0.3rem;
-        width: 90%;
-        min-height: 10rem;
-        background: var(--whiteColor);
-        margin: 3rem 0;
-    }
-    .post-header{
-        height: 3rem;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-    
-    }
-    .post-header-title{
-        width: 45%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom:1rem;
-    }
-    .post-info-community-name{
-        font-weight: 1rem;
-        font-weight: 600;
-        color: var(titleColor);
-    }
-    .post-info-owner-name,
-    .post-info-date{
-        font-size: 0.9rem;
-        font-weight:300;
-        color: var(titleColor);
-    }
-    .join-button{
-        width: 10%;
-        background: var(--iconColor);
-        color: var(--whiteColor);
-        display: flex;
-        align-items: center; 
-        justify-content:space-evenly;
-        border-radius: 25px;
-        padding: 0.2rem;
-        cursor: pointer;
-    }
-    .post-title{
-        width: fit-content;
-        max-width: 85%;
-        color: #242424;
-        margin-bottom: 2rem;
-    }
+/* Post Section */
+.posts-box {
+  display: flex;
+  flex-direction: column;
+}
+.posts-container {
+  width: 50%;
+}
+.post-card {
+  padding: 0.3rem;
+  width: 90%;
+  min-height: 10rem;
+  background: var(--whiteColor);
+  margin: 3rem 0;
+}
+.post-header {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-header-title {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.post-info-community-name {
+  font-weight: 1rem;
+  font-weight: 600;
+  color: var(titleColor);
+}
+.post-info-owner-name,
+.post-info-date {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(titleColor);
+}
+.join-button {
+  width: 10%;
+  background: var(--iconColor);
+  color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+.post-title {
+  width: fit-content;
+  max-width: 85%;
+  color: #242424;
+  margin-bottom: 2rem;
+}
+.logout-title{
+  margin: 0 0.5rem;
+  color: var(--titleColor)
+}
