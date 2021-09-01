@@ -9,8 +9,8 @@
     font-family: 'Open Sans', sans-serif;
     --brandColor: #FA4502;
     --mainColor: #DAE0E6;
-    --titleColor: #1C1C1C;
-    --SubTitleColor: #7C7C7C;
+    --titleColor: #242424;
+    --SubTitleColor: #646464;
     --paragraphColor: #1A1A1B;
     --whiteColor: #FFFFFF;
     --iconColor: #2279D3;
@@ -36,4 +36,7 @@
 }
 .col-6{
     flex : 6;
+}
+body{
+    background: var(--mainColor);
 }
