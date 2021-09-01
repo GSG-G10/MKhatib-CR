@@ -7,6 +7,7 @@ const getCommunityName = require('./middleware.get-community-id');
 const getPostInfo = require('./midlleware.get-post-info');
 const getPostId = require('./midlleware.get-post-id');
 const getTrendingNews = require('./midlleware.get-trending-news');
+const verifyAuthentication = require('./midlleware.verify-authentication');
 
 module.exports = {
   hashPassword,
@@ -16,4 +17,5 @@ module.exports = {
   getPostInfo,
   getPostId,
   getTrendingNews,
+  verifyAuthentication,
 };

@@ -17,11 +17,12 @@ const {
   getPostInfo,
   getPostId,
   getTrendingNews,
+  verifyAuthentication,
 } = require('../Middlewares');
 
-router.post('/new-post', getCommunityName, newPost, (req, res) => res.json(req.body));
-router.post('/new-comment', getPostInfo, getPostId, newComment, (req, res) => res.json(req.body));
-router.post('/new-community', newCommunity, (req, res) => res.json(req.body));
+router.post('/new-post', verifyAuthentication, getCommunityName, newPost, (req, res) => res.json(req.body));
+router.post('/new-comment', verifyAuthentication, getPostInfo, getPostId, newComment, (req, res) => res.json(req.body));
+router.post('/new-community', verifyAuthentication, newCommunity, (req, res) => res.json(req.body));
 router.post('/add-user', signUpUser);
 router.post('/check-user', signInUser, getUserId, setCookies, (req, res) => res.redirect('/'));
 router.post('/trending-news', getTrendingNews);
