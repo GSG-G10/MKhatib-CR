@@ -21,13 +21,13 @@ module.exports = (req, res, next) => {
                     if (condition) {
                       next();
                     } else {
-                      res.json({ 'Authentication Status': 'You have Entered A wrong data' });
+                      res.status(401).json('You have Entered A Wrong Data');
                     }
                   });
               });
           });
       } else {
-        res.json({ 'Authentication Status': 'You have Entered A wrong data' });
+        res.status(401).json('You have Entered A Wrong Data');
       }
     })
     .catch((err) => new Error(err.message));

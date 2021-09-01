@@ -8,5 +8,5 @@ module.exports = (req, res, next) => {
       req.body.postId = postId;
       next();
     })
-    .catch((err) => res.json(err.message));
+    .catch(() => res.json('You have Entered A Wrong Data'));
 };
