@@ -4,6 +4,9 @@ const newPost = require('./controller.new-post');
 const setCookies = require('./controller.set-cookies');
 const newComment = require('./controller.new-comment');
 const newCommunity = require('./controller.new-community');
+const loginUser = require('./controller.login-user');
+const signupUser = require('./controller.signup-user');
+const logoutUser = require('./controller.logout-user');
 
 module.exports = {
   signUpUser,
@@ -12,4 +15,7 @@ module.exports = {
   setCookies,
   newComment,
   newCommunity,
+  loginUser,
+  signupUser,
+  logoutUser,
 };

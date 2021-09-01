@@ -6,6 +6,6 @@ module.exports = (req, res, next) => {
     .then(() => next())
     .catch((err) => {
       const resultError = err.detail.split('=');
-      return res.json(resultError[1]);
+      return res.status(403).json(resultError[1]);
     });
 };

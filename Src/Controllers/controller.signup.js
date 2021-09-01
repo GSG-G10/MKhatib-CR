@@ -8,7 +8,12 @@ module.exports = (req, res, next) => {
   } = req.body;
   hashPassword(password)
     .then((hashedPass) => signUp(username, email, firstName, lastName, hashedPass))
-    .catch((err) => new Error(err.message));
-  res.redirect('/');
-  next();
+    .then(() => {
+      res.redirect('/');
+      next();
+    })
+    .catch((err) => {
+      const resultError = err.detail.split('=');
+      return res.status(401).json(resultError[1]);
+    });
 };
