@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const getCookie = (name) => {
   const cookie = {};
   document.cookie.split(';').forEach((el) => {
@@ -13,15 +15,12 @@ const parseToken = (token) => {
 
   return JSON.parse(jsonPayload);
 };
-// eslint-disable-next-line no-unused-vars
+
 const autoCheckLogin = (() => {
   if (getCookie('token')) {
-    // eslint-disable-next-line no-undef
     user();
-    // eslint-disable-next-line no-unused-vars
     const userInfo = parseToken(getCookie('token'));
   } else {
-    // eslint-disable-next-line no-undef
     visitor();
   }
 })();
