@@ -16,7 +16,40 @@
     <title>Reddit</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
+  <section class="signup-form-container">
+    <div class="signup-form-header">
+      <h1 class="form-header-title">
+        <i class="fab fa-reddit-alien"></i>
+        Welcome Sign Up
+      </h1>
+    </div>
+    <form class="signup-form" action="/add-user" method="POST">
+      <div class="signup-form-input-field">
+        <lable class="sign-up-fprm-lable">Username</lable>
+        <input type="text" name="username" required minlength="5" placeholder="username" />
+      </div>
+      <div class="signup-form-input-field">
+        <lable class="sign-up-fprm-lable">Email</lable>
+        <input type="email" name="email" placeholder="m@mail.com" />
+      </div>
+
+      <div class="signup-form-input-field">
+        <lable class="sign-up-fprm-lable">First Name</lable>
+        <input type="text" name="firstName" required minlength="3" placeholder="first name" />
+      </div>
+
+      <div class="signup-form-input-field">
+        <lable class="sign-up-fprm-lable">Last Name</lable>
+        <input type="text" name="lastName" required minlength="3" placeholder="last name" />
+      </div>
+
+      <div class="signup-form-input-field">
+        <lable class="sign-up-fprm-lable">Password</lable>
+        <input type="password" name="password" required minlength="7" placeholder="password" />
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
 </body>
 </html>
