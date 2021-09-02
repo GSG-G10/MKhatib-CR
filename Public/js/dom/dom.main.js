@@ -1,3 +1,5 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable no-unused-vars */
 const postContent = document.querySelectorAll('.post-content');
 const loginButton = document.querySelector('.auth-login');
 const signupButton = document.querySelector('.auth-signup');
@@ -14,15 +16,12 @@ postContent.forEach((element) => {
   });
 });
 
-// eslint-disable-next-line no-unused-vars
 const visitor = () => {
   logoutButton.style.display = 'none';
 };
-// eslint-disable-next-line no-unused-vars
 const user = () => {
   loginButton.style.display = 'none';
   signupButton.style.display = 'none';
   topTrendingSection.style.display = 'none';
-  // eslint-disable-next-line no-return-assign
   joinButton.forEach((e) => e.style.display = 'none');
 };

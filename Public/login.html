@@ -22,17 +22,24 @@
         <span class="header-icon">
           <i class="fab fa-reddit-alien"></i>
         </span>
+        
       </div>
+      
     </header>
     <main>
+      <div class="login-authentication-status">
+          <span class="authentication-status">
+          </span>
+      </div>
       <div class="login">
         <figure class="avatar">
           <img src="//picsum.photos/70" alt="Avatar" class="avatar__image" />
         </figure>
-        <form class="form" action="/check-user" method="post">
+        <div class="login-form">
           <div class="input">
             <labe class="input__label">Username</labe>
             <input
+              id="username"
               type="text"
               name="username"
               class="input__username"
@@ -43,6 +50,7 @@
           <div class="input">
             <labe class="input__label">Password</labe>
             <input
+            id="password"
               type="password"
               name="password"
               class="input__password"
@@ -50,9 +58,11 @@
               required
             />
           </div>
-          <button type="submit" class="form__button">Log in</button>
-        </form>
+          <button type="submit" id = "submit-button" class="login-form-button">Log in</button>
+        </div>
       </div>
     </main>
+    <script src="./js/dom/dom.login.js"></script>
+    <script src="./js/fetch/fetch.login.js"></script>
   </body>
 </html>
