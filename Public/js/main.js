@@ -6,11 +6,22 @@ const getCookie = (name) => {
   });
   return cookie[name];
 };
+const parseToken = (token) => {
+  const base64Url = token.split('.')[1];
+  const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  const jsonPayload = decodeURIComponent(atob(base64).split('').map((c) => `%${(`00${c.charCodeAt(0).toString(16)}`).slice(-2)}`).join(''));
 
+  return JSON.parse(jsonPayload);
+};
+// eslint-disable-next-line no-unused-vars
 const autoCheckLogin = (() => {
   if (getCookie('token')) {
+    // eslint-disable-next-line no-undef
     user();
+    // eslint-disable-next-line no-unused-vars
+    const userInfo = parseToken(getCookie('token'));
   } else {
+    // eslint-disable-next-line no-undef
     visitor();
   }
 })();
