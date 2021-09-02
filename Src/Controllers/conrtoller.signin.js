@@ -29,6 +29,5 @@ module.exports = (req, res, next) => {
       } else {
         res.status(401).json('You have Entered A Wrong Data');
       }
-    })
-    .catch((err) => new Error(err.message));
+    });
 };
