@@ -17,7 +17,7 @@ submitBtn.addEventListener('click', () => {
         window.location.href = res.url;
       } else if (res.status === 401) {
         res.json()
-          .then((response) => authenticationStatus.textContent = response);
+          .then((response) => authenticationError(response));
       }
     });
 });
