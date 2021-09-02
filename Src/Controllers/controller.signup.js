@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
   hashPassword(password)
     .then((hashedPass) => signUp(username, email, firstName, lastName, hashedPass))
     .then(() => {
-      res.redirect('/');
+      res.redirect('/login');
       next();
     })
     .catch((err) => {

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -11,41 +11,48 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style/main-style.css">
-    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/main-style.css" />
+    <link rel="stylesheet" href="./style/login.css" />
     <title>Log In</title>
-</head>
-<body>
-  <header class="header">
-    <div class="header-box">
-       <span class="header-icon">
-      <i class="fab fa-reddit-alien"></i>
-    </span>
-    <h4 class="header-title">
-      Log In Reddit
-    </h4>
-    </div>
-   
-    
-  </header>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-box">
+        <h4 class="header-title">Log In</h4>
+        <span class="header-icon">
+          <i class="fab fa-reddit-alien"></i>
+        </span>
+      </div>
+    </header>
     <main>
       <div class="login">
         <figure class="avatar">
-          <img src="//picsum.photos/70" alt="Avatar" class="avatar__image">
-          
+          <img src="//picsum.photos/70" alt="Avatar" class="avatar__image" />
         </figure>
         <form class="form" action="/check-user" method="post">
           <div class="input">
             <labe class="input__label">Username</labe>
-            <input type="text" name="username" class="input__username" placeholder="username" required>
+            <input
+              type="text"
+              name="username"
+              class="input__username"
+              placeholder="username"
+              required
+            />
           </div>
           <div class="input">
             <labe class="input__label">Password</labe>
-            <input type="password" name="password" class="input__password" placeholder="Password" required>
+            <input
+              type="password"
+              name="password"
+              class="input__password"
+              placeholder="Password"
+              required
+            />
           </div>
           <button type="submit" class="form__button">Log in</button>
         </form>
-      </div>  
+      </div>
     </main>
-</body>
+  </body>
 </html>
