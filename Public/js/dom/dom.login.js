@@ -3,3 +3,6 @@ const username = document.querySelector('#username');
 const password = document.querySelector('#password');
 const submitBtn = document.querySelector('#submit-button');
 const authenticationStatus = document.querySelector('.authentication-status');
+const authenticationError = (response) => {
+  authenticationStatus.textContent = response;
+};
