@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 /* eslint-disable no-undef */
 submitBtn.addEventListener('click', () => {
   fetch('/check-user', {
@@ -16,11 +17,7 @@ submitBtn.addEventListener('click', () => {
         window.location.href = res.url;
       } else if (res.status === 401) {
         res.json()
-          .then((response) => response)
-          .then((response) => {
-            authenticationStatus.textContent = response;
-          });
+          .then((response) => authenticationStatus.textContent = response);
       }
-    })
-    .catch(() => Promise.reject());
+    });
 });
