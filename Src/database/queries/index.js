@@ -7,6 +7,7 @@ const newPost = require('./query.new-post');
 const newComment = require('./query.new-comment');
 const getPostId = require('./query.get-post-id');
 const newCommunity = require('./query.new-community');
+const getAvatar = require('./query.get-avatar');
 
 module.exports = {
   signUp,
@@ -18,4 +19,5 @@ module.exports = {
   newComment,
   getPostId,
   newCommunity,
+  getAvatar,
 };
