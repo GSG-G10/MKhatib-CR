@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+
 const getCookie = (name) => {
   const cookie = {};
   document.cookie.split(';').forEach((el) => {
