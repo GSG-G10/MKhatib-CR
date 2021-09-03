@@ -3,7 +3,6 @@ const { signUp } = require('../database/queries');
 const { hashPassword } = require('../Middlewares');
 
 module.exports = (req, res, next) => {
-  console.log(req.body);
   const {
     username, email, firstName, lastName, password,
   } = req.body;

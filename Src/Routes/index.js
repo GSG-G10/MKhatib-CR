@@ -19,6 +19,7 @@ const {
   getTrendingNews,
   verifyAuthentication,
   getAvatar,
+  checkCommunities,
 } = require('../Middlewares');
 
 router.post('/new-post', verifyAuthentication, getCommunityName, newPost, (req, res) => res.json(req.body));
@@ -30,4 +31,5 @@ router.post('/trending-news', getTrendingNews);
 router.get('/login', loginUser);
 router.get('/signup', signupUser);
 router.get('/logout', logoutUser);
+router.get('/check-communities', checkCommunities);
 module.exports = router;
