@@ -10,6 +10,7 @@ const getTrendingNews = require('./midlleware.get-trending-news');
 const verifyAuthentication = require('./midlleware.verify-authentication');
 const getAvatar = require('./middleware.get-avatar');
 const checkCommunities = require('./middleware.check-communities');
+const getUserCommunityPosts = require('./middleware.get-user-community-posts');
 
 module.exports = {
   hashPassword,
@@ -22,4 +23,5 @@ module.exports = {
   verifyAuthentication,
   getAvatar,
   checkCommunities,
+  getUserCommunityPosts,
 };
