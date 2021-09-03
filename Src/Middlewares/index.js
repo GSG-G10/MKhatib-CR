@@ -11,6 +11,7 @@ const verifyAuthentication = require('./midlleware.verify-authentication');
 const getAvatar = require('./middleware.get-avatar');
 const checkCommunities = require('./middleware.check-communities');
 const getUserCommunityPosts = require('./middleware.get-user-community-posts');
+const followCommunity = require('./middleware.follow-community');
 
 module.exports = {
   hashPassword,
@@ -24,4 +25,5 @@ module.exports = {
   getAvatar,
   checkCommunities,
   getUserCommunityPosts,
+  followCommunity,
 };
