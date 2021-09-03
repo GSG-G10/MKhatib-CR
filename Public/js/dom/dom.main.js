@@ -25,6 +25,9 @@ postContent.forEach((element) => {
 
 const visitor = () => {
   logoutButton.style.display = 'none';
+  newPostSection.style.display = 'none';
+  newPostModal.style.display = 'none';
+
 };
 const user = () => {
   loginButton.style.display = 'none';
