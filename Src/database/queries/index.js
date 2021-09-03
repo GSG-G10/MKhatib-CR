@@ -12,6 +12,7 @@ const getCommunities = require('./query.get-communities');
 const CheckUserId = require('./query.check-user-id');
 const getUserCommunityPosts = require('./query.get-user-community-posts');
 const FollowCommunity = require('./query.follow-community');
+const getSpecificPostsById = require('./query.get-specific-posts-by-id');
 
 module.exports = {
   signUp,
@@ -28,4 +29,5 @@ module.exports = {
   CheckUserId,
   getUserCommunityPosts,
   FollowCommunity,
+  getSpecificPostsById,
 };
