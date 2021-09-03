@@ -5,7 +5,7 @@ module.exports = (userId) => connection.query(
   users.username, communities.community_name,users.avatar, community_posts.post_title,
   community_posts.content_type,community_posts.content, community_posts.post_date,
   community_posts.flair_name,
-  community_posts.post_votes
+  community_posts.post_votes, community_posts.id
   From users
   JOIN
   community_posts

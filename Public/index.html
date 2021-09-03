@@ -142,6 +142,19 @@
               <i class="fas fa-link"></i>
             </span>
           </div>
+          <input
+            class="modal-post-title"
+            placeholder="Enter Your Post Content"
+            type="text"
+            id="url"
+            name="url"
+          />
+          <img
+            class="modal-post-image-testing"
+            id="image"
+            onerror="errorCallback()"
+            onload="loadCallback()"
+          />
           <textarea
             controls="off"
             cols="150"
@@ -149,27 +162,55 @@
             name=""
             id="newPostModalContent"
             class="modal-post-area"
-            placeholder="Type Your Post"
+            placeholder="Type Your Post Content"
           ></textarea>
-          <span class="modal-send-post">Post</span>
+          <button class="modal-send-post" onclick="testImage()">Post</button>
         </div>
       </section>
       <section class="posts-box">
         <div class="container posts-container">
           <!-- Start Fake Data -->
-          <div class="post-card">
+          <!-- <div class="post-card">
             <div class="post-header">
               <div class="post-header-title">
+                <div class="user-avatar">
+                  <img
+                    class="user-avatar-src"
+                    src="https://robohash.org/consequaturmollitiaqui.png?size=50x50&set=set1"
+                  />
+                </div>
                 <span class="post-info-community-name">R/funny</span>
                 <span class="post-info-owner-name">Posted by Drewlyn</span>
                 <span class="post-info-date">4 hours ago</span>
               </div>
-              <span class="join-button"><i class="fas fa-plus"></i>Join</span>
+              <a href="/login" class="join-button"><i class="fas fa-plus"></i>Join</a>
             </div>
-            <h3 class="post-title">
-              A few people asked for a picture of my son's birthday cake after
-              seeing its horrifying topper. Here it is.
-            </h3>
+            <div class="post-title-box">
+              <h4 class="post-title">
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+              </h4>
+              <div class="post-votes">
+                <span class="post-votes-up"><i class="far fa-arrow-alt-circle-up"></i></span>
+                <span class="post-votes-status">166</span>
+                <span class="post-votes-down"><i class="far fa-arrow-alt-circle-down"></i></span>
+              </div>
+
+            </div>
             <div class="post-content">
               <video controls>
                 <source
@@ -183,149 +224,59 @@
           <div class="post-card">
             <div class="post-header">
               <div class="post-header-title">
+                <div class="user-avatar">
+                  <img
+                    class="user-avatar-src"
+                    src="https://robohash.org/consequaturmollitiaqui.png?size=50x50&set=set1"
+                  />
+                </div>
                 <span class="post-info-community-name">R/funny</span>
                 <span class="post-info-owner-name">Posted by Drewlyn</span>
                 <span class="post-info-date">4 hours ago</span>
               </div>
               <span class="join-button"><i class="fas fa-plus"></i>Join</span>
             </div>
-            <h3 class="post-title">
-              A few people asked for a picture of my son's birthday cake after
-              seeing its horrifying topper. Here it is.
-            </h3>
-            <div class="post-content">
-              <video controls>
-                <source
-                  preload="auto"
-                  src="http://techslides.com/demos/sample-videos/small.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <div class="post-card">
-            <div class="post-header">
-              <div class="post-header-title">
-                <span class="post-info-community-name">R/funny</span>
-                <span class="post-info-owner-name">Posted by Drewlyn</span>
-                <span class="post-info-date">4 hours ago</span>
+            <div class="post-title-box">
+              <h4 class="post-title">
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+                A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.A few people asked for a picture of my son's birthday cake after
+                seeing its horrifying topper. Here it is.
+              </h4>
+              <div class="post-votes">
+                <span class="post-votes-up"><i class="far fa-arrow-alt-circle-up"></i></span>
+                <span class="post-votes-status">166</span>
+                <span class="post-votes-down"><i class="far fa-arrow-alt-circle-down"></i></span>
               </div>
-              <span class="join-button"><i class="fas fa-plus"></i>Join</span>
+
             </div>
-            <h3 class="post-title">
-              A few people asked for a picture of my son's birthday cake after
-              seeing its horrifying topper. Here it is.
-            </h3>
             <div class="post-content">
-              <video controls>
-                <source
-                  preload="auto"
-                  src="http://techslides.com/demos/sample-videos/small.mp4"
-                  type="video/mp4"
-                />
-              </video>
+              <img
+                src="https://media-s3-us-east-1.ceros.com/getty-images-services/images/2021/02/17/873fbbf6e4e681de0a096047fbba095d/da-20-0630.jpg"
+                alt=""
+              />
             </div>
-          </div>
-          <div class="post-card">
-            <div class="post-header">
-              <div class="post-header-title">
-                <span class="post-info-community-name">R/funny</span>
-                <span class="post-info-owner-name">Posted by Drewlyn</span>
-                <span class="post-info-date">4 hours ago</span>
-              </div>
-              <span class="join-button"><i class="fas fa-plus"></i>Join</span>
-            </div>
-            <h3 class="post-title">
-              A few people asked for a picture of my son's birthday cake after
-              seeing its horrifying topper. Here it is.
-            </h3>
-            <div class="post-content">
-              <video controls>
-                <source
-                  preload="auto"
-                  src="http://techslides.com/demos/sample-videos/small.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <div class="post-card">
-            <div class="post-header">
-              <div class="post-header-title">
-                <span class="post-info-community-name">R/funny</span>
-                <span class="post-info-owner-name">Posted by Drewlyn</span>
-                <span class="post-info-date">4 hours ago</span>
-              </div>
-              <span class="join-button"><i class="fas fa-plus"></i>Join</span>
-            </div>
-            <h3 class="post-title">
-              A few people asked for a picture of my son's birthday cake after
-              seeing its horrifying topper. Here it is.
-            </h3>
-            <div class="post-content">
-              <video controls>
-                <source
-                  preload="auto"
-                  src="http://techslides.com/demos/sample-videos/small.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <div class="post-card">
-            <div class="post-header">
-              <div class="post-header-title">
-                <span class="post-info-community-name">R/funny</span>
-                <span class="post-info-owner-name">Posted by Drewlyn</span>
-                <span class="post-info-date">4 hours ago</span>
-              </div>
-              <span class="join-button"><i class="fas fa-plus"></i>Join</span>
-            </div>
-            <h3 class="post-title">
-              A few people asked for a picture of my son's birthday cake after
-              seeing its horrifying topper. Here it is.
-            </h3>
-            <div class="post-content">
-              <video controls>
-                <source
-                  preload="auto"
-                  src="http://techslides.com/demos/sample-videos/small.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <div class="post-card">
-            <div class="post-header">
-              <div class="post-header-title">
-                <span class="post-info-community-name">R/funny</span>
-                <span class="post-info-owner-name">Posted by Drewlyn</span>
-                <span class="post-info-date">4 hours ago</span>
-              </div>
-              <span class="join-button"><i class="fas fa-plus"></i>Join</span>
-            </div>
-            <h3 class="post-title">
-              A few people asked for a picture of my son's birthday cake after
-              seeing its horrifying topper. Here it is.
-            </h3>
-            <div class="post-content">
-              <video controls>
-                <source
-                  preload="auto"
-                  src="http://techslides.com/demos/sample-videos/small.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
+          </div> -->
           <!-- Start Fake Data -->
         </div>
       </section>
     </main>
+    <script src="./js/logic.js"></script>
     <script src="./js/dom/dom.main.js"></script>
     <script src="./js/fetch/fetch.main.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/fetch/fetch.check-communities.js"></script>
-
   </body>
 </html>
