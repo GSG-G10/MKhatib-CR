@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-unused-vars */
 // const postContent = document.querySelectorAll('.post-content');
@@ -6,15 +7,21 @@ const loginButton = document.querySelector('.auth-login');
 const signupButton = document.querySelector('.auth-signup');
 const logoutButton = document.querySelector('.auth-logout');
 const topTrendingSection = document.querySelector('.top-trending');
-const newPostSection = document.querySelector('.new-post-section');
-const newPostModal = document.querySelector('.new-post-modal');
-const modalClose = document.querySelector('.modal-close');
 const typePostText = document.querySelector('.type-post-text');
 const typePostPV = document.querySelector('.type-post-pv');
 const typePostLink = document.querySelector('.type-post-link');
 const postsContainer = document.querySelector('.posts-container');
-const modalPostTitle = document.querySelector('.modal-post-title');
 const comunitySelector = document.querySelector('#comunityName');
+// modal
+const newPostSection = document.querySelector('.new-post-section');
+const newPostModal = document.querySelector('.new-post-modal');
+const modalClose = document.querySelector('.modal-close');
+const modalSendPostBtn = document.querySelector('.modal-send-post');
+const modalPostArea = document.querySelector('.modal-post-area');
+const modalCommunitiesSelector = document.querySelector('.modal-header-communities');
+const modalCommunitiesOption = document.querySelector('.modal-header-communities-option');
+const modalPostTitle = document.querySelector('.modal-post-title');
+const modalPostFlairName = document.querySelector('.modal-post-flair-name');
 
 const visitor = () => {
   logoutButton.style.display = 'none';
@@ -25,41 +32,12 @@ const user = () => {
   loginButton.style.display = 'none';
   signupButton.style.display = 'none';
   topTrendingSection.style.display = 'none';
+  newPostSection.style.display = 'flex';
+  newPostModal.style.display = 'flex';
 };
-newPostSection.addEventListener('click', () => {
-  newPostSection.classList.remove('show');
-  newPostSection.classList.add('hidde');
-
-  newPostModal.classList.remove('hidde');
-  newPostModal.classList.add('show');
-});
-modalClose.addEventListener('click', () => {
-  newPostModal.classList.remove('show');
-  newPostModal.classList.add('hidde');
-  newPostSection.classList.remove('hidde');
-  newPostSection.classList.add('show');
-});
-
-typePostText.addEventListener('click', () => {
-  typePostText.classList.add('active');
-  modalPostTitle.placeholder = 'Type Your Title';
-  typePostPV.classList.remove('active');
-  typePostLink.classList.remove('active');
-});
-typePostPV.addEventListener('click', () => {
-  typePostPV.classList.add('active');
-  modalPostTitle.placeholder = 'Enter Your Photo or Video Link';
-  typePostText.classList.remove('active');
-  typePostLink.classList.remove('active');
-});
-typePostLink.addEventListener('click', () => {
-  modalPostTitle.classList.add('active');
-  modalPostTitle.placeholder = 'Enter Your link';
-  typePostText.classList.remove('active');
-  typePostPV.classList.remove('active');
-});
 
 const postBuilder = (array) => {
+  const posts = array.reverse();
   array.forEach((element) => {
     // Create Elements
     const createPostCard = document.createElement('div');
@@ -153,14 +131,91 @@ const modalCommunities = (data) => {
     comunitySelector.appendChild(selectorOption);
   });
 };
+// Show Modal
+newPostSection.addEventListener('click', () => {
+  newPostSection.classList.remove('show');
+  newPostSection.classList.add('hidde');
+
+  newPostModal.classList.remove('hidde');
+  newPostModal.classList.add('show');
+});
+// Close Modal
+modalClose.addEventListener('click', () => {
+  newPostModal.classList.remove('show');
+  newPostModal.classList.add('hidde');
+  newPostSection.classList.remove('hidde');
+  newPostSection.classList.add('show');
+});
+// Type of post
+typePostText.addEventListener('click', () => {
+  typePostText.classList.add('active');
+  modalPostArea.id = 'text';
+  modalPostTitle.placeholder = 'Type Your Title';
+  typePostPV.classList.remove('active');
+  typePostLink.classList.remove('active');
+  modalPostTitle.value = '';
+  modalPostArea.value = '';
+});
+typePostPV.addEventListener('click', () => {
+  typePostPV.classList.add('active');
+  modalPostArea.id = 'url';
+  modalPostTitle.placeholder = 'The Photo or Video Title';
+  modalPostArea.placeholder = 'Enter Your Photo or Video Link';
+  typePostText.classList.remove('active');
+  typePostLink.classList.remove('active');
+  modalPostTitle.value = '';
+  modalPostArea.value = '';
+});
+typePostLink.addEventListener('click', () => {
+  typePostLink.classList.add('active');
+  modalPostArea.id = 'link';
+  modalPostTitle.placeholder = 'Enter Your link';
+  typePostText.classList.remove('active');
+  typePostPV.classList.remove('active');
+  modalPostTitle.value = '';
+  modalPostArea.value = '';
+});
+
 const testImage = () => {
   document.getElementById('image').src = document.getElementById('url').value;
 };
 
 const errorCallback = () => {
-  console.log('Image did not exist');
+  alert('Image did not exist');
 };
 
 const loadCallback = () => {
-  console.log('Image existed');
+  const postDate = getDate();
+  newPost(
+    modalCommunitiesSelector.value,
+    modalPostTitle.value,
+    modalPostArea.value,
+    postDate,
+    modalPostFlairName.value,
+  );
+  console.log('Image is exist');
 };
+
+modalSendPostBtn.addEventListener('click', () => {
+  const postDate = getDate();
+  if (typePostText.classList.contains('active')
+   || typePostLink.classList.contains('active')) {
+    newPost(
+      modalCommunitiesSelector.value,
+      modalPostTitle.value,
+      modalPostArea.value,
+      postDate,
+      modalPostFlairName.value,
+    );
+  } else if (typePostPV.classList.contains('active')) {
+    testImage();
+  } else {
+    newPost(
+      modalCommunitiesSelector.value,
+      modalPostTitle.value,
+      modalPostArea.value,
+      postDate,
+      modalPostFlairName.value,
+    );
+  }
+});

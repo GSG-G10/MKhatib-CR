@@ -3,9 +3,8 @@ const { newPost } = require('../database/queries');
 
 module.exports = (req, res, next) => {
   const { token } = req.cookies;
-  const decode = jwt.decode(token, (err, data) => data);
-  const ownerId = decode.userId;
-
+  const { userId } = jwt.decode(token, (err, data) => data);
+  const ownerId = userId;
   const {
     communityId,
     postTitle,

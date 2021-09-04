@@ -8,7 +8,6 @@ const newComment = require('./query.new-comment');
 const getPostId = require('./query.get-post-id');
 const newCommunity = require('./query.new-community');
 const getAvatar = require('./query.get-avatar');
-const getCommunities = require('./query.get-communities');
 const CheckUserId = require('./query.check-user-id');
 const getUserCommunityPosts = require('./query.get-user-community-posts');
 const FollowCommunity = require('./query.follow-community');
@@ -26,7 +25,6 @@ module.exports = {
   getPostId,
   newCommunity,
   getAvatar,
-  getCommunities,
   CheckUserId,
   getUserCommunityPosts,
   FollowCommunity,
