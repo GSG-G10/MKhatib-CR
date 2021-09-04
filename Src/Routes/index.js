@@ -10,6 +10,7 @@ const {
   loginUser,
   signupUser,
   logoutUser,
+  communities,
 } = require('../Controllers');
 const {
   getUserId,
@@ -33,6 +34,7 @@ router.post('/check-user', signInUser, getUserId, getAvatar, setCookies, (req, r
 router.post('/follow-community', followCommunity, getSpecificPostsById);
 router.post('/trending-news', getTrendingNews);
 router.get('/login', loginUser);
+router.get('/communites', communities);
 router.get('/signup', signupUser);
 router.get('/logout', logoutUser);
 router.get('/get-user-posts', getUserCommunityPosts);
