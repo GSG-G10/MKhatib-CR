@@ -288,8 +288,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
-  /* pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
   
 }
 .modal-container {
@@ -324,6 +324,7 @@
   justify-content: space-evenly;
 }
 .modal-header-communities{
+  border : 1px solid var(--mainColor);
   border-radius: 5px;
   background: var(--whiteColor);
   outline: none;
