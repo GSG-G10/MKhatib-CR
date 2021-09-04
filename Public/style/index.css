@@ -288,8 +288,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  /* pointer-events: none; */
   
 }
 .modal-container {
@@ -322,6 +322,17 @@
   height: 12%;
   display: flex;
   justify-content: space-evenly;
+}
+.modal-header-communities{
+  border-radius: 5px;
+  background: var(--whiteColor);
+  outline: none;
+  padding: 1rem;
+  appearance: none;
+}
+.modal-header-communities-option{
+  color: var(--titleColor);
+  text-align: center;
 }
 .modal-header-icon {
   width: 15%;

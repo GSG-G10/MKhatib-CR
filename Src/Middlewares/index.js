@@ -13,6 +13,7 @@ const checkCommunities = require('./middleware.check-communities');
 const getUserCommunityPosts = require('./middleware.get-user-community-posts');
 const followCommunity = require('./middleware.follow-community');
 const getSpecificPostsById = require('./middleware.get-specific-posts-by-id');
+const getCommunitiesUserFollow = require('./middleware.get-communities-user-follow');
 
 module.exports = {
   hashPassword,
@@ -28,4 +29,5 @@ module.exports = {
   getUserCommunityPosts,
   followCommunity,
   getSpecificPostsById,
+  getCommunitiesUserFollow,
 };

@@ -14,6 +14,7 @@ const typePostPV = document.querySelector('.type-post-pv');
 const typePostLink = document.querySelector('.type-post-link');
 const postsContainer = document.querySelector('.posts-container');
 const modalPostTitle = document.querySelector('.modal-post-title');
+const comunitySelector = document.querySelector('#comunityName');
 
 const visitor = () => {
   logoutButton.style.display = 'none';
@@ -60,7 +61,6 @@ typePostLink.addEventListener('click', () => {
 
 const postBuilder = (array) => {
   array.forEach((element) => {
-    console.log(element);
     // Create Elements
     const createPostCard = document.createElement('div');
     postsContainer.appendChild(createPostCard);
@@ -141,6 +141,16 @@ const postBuilder = (array) => {
     postVotesDown.appendChild(voteIconDown);
     // Conditions
     // const postContentVideo = document.createElement('video');
+  });
+};
+
+const modalCommunities = (data) => {
+  data.forEach((element) => {
+    const selectorOption = document.createElement('option');
+    selectorOption.value = element.community_name;
+    selectorOption.textContent = element.community_name;
+    selectorOption.classList.add('modal-header-communities-option');
+    comunitySelector.appendChild(selectorOption);
   });
 };
 const testImage = () => {

@@ -22,6 +22,7 @@ const autoCheckLogin = (() => {
     user();
     const userInfo = parseToken(getCookie('token'));
     getUserPosts();
+    getCommunitiesUserFollow();
   } else {
     visitor();
   }
