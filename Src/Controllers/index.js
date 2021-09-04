@@ -7,6 +7,7 @@ const newCommunity = require('./controller.new-community');
 const loginUser = require('./controller.login-user');
 const signupUser = require('./controller.signup-user');
 const logoutUser = require('./controller.logout-user');
+const communities = require('./controller.communities');
 
 module.exports = {
   signUpUser,
@@ -18,4 +19,5 @@ module.exports = {
   loginUser,
   signupUser,
   logoutUser,
+  communities,
 };
