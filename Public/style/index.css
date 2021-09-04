@@ -323,6 +323,18 @@
   display: flex;
   justify-content: space-evenly;
 }
+.modal-header-communities{
+  border : 1px solid var(--mainColor);
+  border-radius: 5px;
+  background: var(--whiteColor);
+  outline: none;
+  padding: 1rem;
+  appearance: none;
+}
+.modal-header-communities-option{
+  color: var(--titleColor);
+  text-align: center;
+}
 .modal-header-icon {
   width: 15%;
   display: flex;
