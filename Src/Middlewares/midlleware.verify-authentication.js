@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
   try {
     const user = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     const { userId, username } = user;
-    req.body.userId = userId;
+    req.body.ownerId = userId;
     req.body.username = username;
     next();
   } catch (err) {

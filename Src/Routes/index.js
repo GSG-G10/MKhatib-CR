@@ -19,14 +19,13 @@ const {
   getTrendingNews,
   verifyAuthentication,
   getAvatar,
-  checkCommunities,
   getUserCommunityPosts,
   followCommunity,
   getSpecificPostsById,
   getCommunitiesUserFollow,
 } = require('../Middlewares');
 
-router.post('/new-post', verifyAuthentication, getCommunityName, newPost, (req, res) => res.json(req.body));
+router.post('/new-post', verifyAuthentication, getCommunityName, newPost, (req, res) => res.redirect('/'));
 router.post('/new-comment', verifyAuthentication, getPostInfo, getPostId, newComment, (req, res) => res.json(req.body));
 router.post('/new-community', verifyAuthentication, newCommunity, (req, res) => res.json(req.body));
 router.post('/add-user', signUpUser);
@@ -36,7 +35,6 @@ router.post('/trending-news', getTrendingNews);
 router.get('/login', loginUser);
 router.get('/signup', signupUser);
 router.get('/logout', logoutUser);
-router.get('/check-communities', checkCommunities);
 router.get('/get-user-posts', getUserCommunityPosts);
 router.get('/communities-Follows', getCommunitiesUserFollow);
 module.exports = router;

@@ -27,9 +27,9 @@ CREATE TABLE community_posts (
     owner_id INTEGER REFERENCES users(id) ON UPDATE CASCADE,
     community_id INTEGER REFERENCES communities(id) ON UPDATE CASCADE,
     post_title VARCHAR(255) NOT NULL,
-    content_type VARCHAR(255) NOT NULL,
+    content_type VARCHAR(255),
     content TEXT NOT NULL,
-    post_date DATE NOT NULL,
+    post_date TEXT NOT NULL,
     flair_name VARCHAR(255),
     post_votes INTEGER default 0
 );
